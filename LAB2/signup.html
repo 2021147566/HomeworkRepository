@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset = "utf-8">
+        <title>LAB2_signup</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <br>
+        <center>
+        <div class="TitleName">
+            <p>Welcome to EUISEO's<br> INTERNET-PROGRAMMING SHOP</p>
+        </div>
+        <p><button type="button" style="margin-left: 5px;" class="signin_button" onclick="location.href='./login.html'">로그인</button>
+            <button type="button" style="margin-right: 5px;" class="login_button">회원가입</button></p>
+
+        <hr width="70%" size="6" color= "black">
+        
+        <p class="info">회원 정보 ( 필수 )</p>
+        <form method="post" action="./login.html" autocomplete="on">
+			<p><label>이름 : 
+				<input type="text" id="NAME" autofocus 
+					placeholder="이름을 입력하세요" 
+                    style= "width : 340px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';" required />
+				</label></p>
+            <p><label>이메일 : 
+                <input type="email" id="EMAIL" autofocus 
+                    placeholder="abcdef@domain.com" 
+                    style= "width : 325px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';" required />
+                </label></p>           
+            <p><label>생일 : 
+                <input type="date" id="BIRTH" style= "width : 345px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';"required />
+                </label></p>
+            <p><label>학년 : 
+                <input type="number" min="1" max="6" step="1" value="1" id="GRADE" autofocus 
+                    style= "width : 340px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';" required />
+                </label></p>
+            <p><label> 전화번호 : 
+                <input type="tel" id="PHONE" placeholder="010-6424-4060" pattern="\d{3}-\d{4}-\d{4}"
+                style= "width : 300px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';" required />
+                </label></p>
+            <p><label>아이디 :
+                <input type="text" id="NEWID"
+                    placeholder="아이디를 입력하세요" 
+                    style= "width : 320px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';" required />
+                </label></p>
+			<p><label>비밀번호 :
+				<input type="password" id="NEWPRD"
+					placeholder="비밀번호를 입력하세요" 
+                    style= "width : 295px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';" required />
+				</label></p>
+            <p><label>비밀번호 확인 : 
+                <input type="password" id="NEWPRD2"
+                    placeholder="비밀번호 확인" 
+                    style= "width : 250px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';" required />
+                </label></p>
+			<p><button type="submit"  class="theme_lightred user_int" onclick="location.href='./login.html'">Signup</button>
+				<button type="reset"  class="theme_red user_int">Cancel</button></p>
+		</form>
+
+        </center>
+
+        <br>
+        
+        <hr width="70%" size="6" color= "black"><br>
+    </body>
+</html>
