@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset = "utf-8">
+        <title>LAB3_login</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <br>
+        <center>
+        <div class="TitleName" style="width: 1020px;">
+            <p>Welcome to EUISEO's<br> INTERNET-PROGRAMMING SHOP</p>
+        </div>
+        
+        <p><button type="button" style="margin-left: 5px;" class="signin_button" onclick="location.href='./index.html'">메인페이지</button>
+            <button type="button" style="margin-left: 5px;" class="login_button">로그인</button>
+		    <button type="button" style="margin-right: 5px;" class="signin_button" onclick="location.href='./signup.html'">회원가입</button></p>
+		
+        <hr width="1020px" size="6" color= "black">
+
+        <p class="info">회원 정보 ( 필수 )</p>
+        <form method="post" action="./login.html" autocomplete="on">
+			<p><label>유저 아이디 : 
+				<input type="text" id="ID" autofocus 
+					placeholder="아이디를 입력하세요" 
+                    style= "width : 267px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';" required />
+				</label></p>
+			<p><label>비밀번호 :
+				<input type="password" id="PASSWORD"
+					placeholder="비밀번호를 입력하세요" 
+                    style= "width : 295px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';" required />
+				</label></p>
+            <p><label>비밀번호 확인 : 
+                <input type="password" id="PASSWORD2"
+                    placeholder="비밀번호 확인" 
+                    style= "width : 250px; height : 30px; font-size: 20px; font-family: 'Do Hyeon';" required />
+                </label></p>
+			<p><button type="submit" class="theme_lightred user_int">로그인</button>
+				<button type="button" onclick="location.href='./signup.html'" class="theme_red user_int">회원가입</button></p>
+		</form>
+
+        </center>
+        <br>
+
+        <hr width="70%" size="6" color= "black"><br>
+    </body>
+</html>
