@@ -1,0 +1,86 @@
+[
+	{
+		"name" : "yay jennie",
+		"price" : 1000,
+		"image" : "yaaaaaaaay.png",
+		"info" : "yay jennie",
+		"type" : "person"
+	},
+	{
+		"name" : "buds case",
+		"price" : 2000,
+		"image" : "buds case.png",
+		"info" : "buds case",
+		"type" : "object"
+	},
+	{
+		"name" : "sunglass",
+		"price" : 3000,
+		"image" : "square_sunglass.png",
+		"info" : "sunglass",
+		"type" : "object"
+	},
+	{
+		"name" : "mouse",
+		"price" : 1000,
+		"image" : "mouse.png",
+		"info" : "mouse",
+		"type" : "object"
+	},
+	{
+		"name" : "why jennie",
+		"price" : 2000,
+		"image" : "why.jpg",
+		"info" : "why jennie",
+		"type" : "person"
+	},
+	{
+		"name" : "speaker",
+		"price" : 1000,
+		"image" : "speaker.png",
+		"info" : "speaker",
+		"type" : "object"
+	},
+	{
+		"name" : "sleepy jennie",
+		"price" : 1000,
+		"image" : "sleepy.png",
+		"info" : "sleepy jennie",
+		"type" : "person"
+	},
+	{
+		"name" : "keyboard",
+		"price" : 1000,
+		"image" : "keyboard.png",
+		"info" : "keyboard",
+		"type" : "object"
+	},
+	{
+		"name" : "flower1",
+		"price" : 1000,
+		"image" : "flower1.png",
+		"info" : "flower1",
+		"type" : "flower"
+	},
+	{
+		"name" : "flower2",
+		"price" : 1000,
+		"image" : "flower2.jpg",
+		"info" : "flower2",
+		"type" : "flower"
+	},
+	{
+		"name" : "flower3",
+		"price" : 1000,
+		"image" : "flower3.jpg",
+		"info" : "flower3",
+		"type" : "flower"
+	},
+	{
+		"name" : "flower4",
+		"price" : 1000,
+		"image" : "flower4.jpg",
+		"info" : "flower4",
+		"type" : "flower"
+	}
+]

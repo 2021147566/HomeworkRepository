@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>LAB5_index</title>
+        <link rel = "stylesheet" type="text/css" href = "main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <br>
+    <center>
+        <div class="TitleName" style="width: 1020px;">
+            <p class = "Title_animation">Welcome to EUISEO's<br> INTERNET-PROGRAMMING SHOP</p>
+        </div>
+        <div class="page_guide">
+            <p><button type="button" style="margin-left: 5px;" class="login_button">메인페이지</button>
+                <button type="button" style="margin-left: 5px;" class="signin_button" onclick="location.href='./login.html'">로그인</button>
+                <button type="button" style="margin-right: 5px;" class="signin_button" onclick="location.href='./signup.html'">회원가입</button>
+            
+            <hr width="1020px" size="6" color= "black">
+        </div>
+       
+        <hr width="1020px" size="2" color= "black">
+        <br>
+        <div>
+            <div>
+                <div class = "option">
+                    <label for="pick_category">Choose a category:</label>
+                    <select id="pick_category" style="font-size: 20px; width: 20%; ">
+                        <option selected>All</option>
+                        <option>person</option>
+                        <option>object</option>
+                        <option>flower</option>
+                    </select>
+                </div>
+            
+
+                <br>
+                <div class = "search">
+                    <label for="search">Enter search term:</label>
+                    <input id="search" style="font-size: 20px; width: 20%;" type="text" placeholder="e.g. jennie">
+                </div>
+                <br>
+
+                <div>
+                    <button id="filter_results" class = 'filter' style="width: 15%;">Filter results</button>
+                </div>
+            </div>
+            <div id="main" class="main_div"></div>
+
+        </div>
+        <script type="text/javascript" src="main.js"></script>
+    </center>
+    </body>
+</html>

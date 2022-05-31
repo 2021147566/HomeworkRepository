@@ -1,0 +1,129 @@
+.TitleName {font-family: 'Rubik Glitch'; font-size: 50px;}
+.info { font-family: 'Do Hyeon'; font-size: 30px; width: 200px;}
+p { margin: 40px 0px 20px 0px; line-height: 120%; }
+body { font-size: 20px; }
+div.page_guide { margin: 0 auto; width: 1020px; }
+div.item_display{ margin: 40px; width: 225px; height: 225px; background-color: rgb(0,0,0,0.4); display: inline-block; overflow: hidden; text-align: right; }
+
+
+
+.theme_lightred { 
+    text-align: center;
+    background-color: #f8d5d5; 
+    color: black; 
+    padding: 10px 50px 10px 50px;
+    font-size: 27px;
+    font-family: 'Black Han Sans';
+    height: 64px;
+    border-width: thick; 
+    border-style: ridge;
+    border-color: rgb(255, 116, 116); 
+}
+.theme_lightred:hover { 
+    text-align: center;
+    background-color: black; 
+    color: #f1b9b9; 
+    padding: 10px 50px 10px 50px;
+    font-size: 27px;
+    height: 64px;
+    font-family: 'Black Han Sans';
+    border-width: thick; 
+    border-style: ridge;
+    border-color: rgb(255, 116, 116); 
+}
+.theme_red { 
+    text-align: center;
+    background-color: #000000; 
+    color: #f1b9b9; 
+    padding: 10px 50px 10px 50px;
+    font-size: 27px;
+    height: 64px;
+    font-family: 'Black Han Sans';
+    border-width: thick; 
+    border-style: ridge;
+    border-color: rgb(255, 116, 116); 
+}
+.theme_red:hover { 
+    text-align: center;
+    background-color: #f1b9b9; 
+    color: black; 
+    padding: 10px 50px 10px 50px;
+    font-size: 27px;
+    height: 64px;
+    font-family: 'Black Han Sans';
+    border-width: thick; 
+    border-style: ridge;
+    border-color: rgb(255, 116, 116); 
+}
+
+
+
+
+
+.login_button {
+    text-decoration: overline underline;
+    text-decoration-color: rgb(255, 116, 116);
+    text-align: center;
+    margin: 12px;
+    border: #ffffff;
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+    font-size: 30px;
+    outline: 0; 
+    font-family: 'Black Han Sans';
+}
+.signin_button {
+    text-align: center;
+    margin: 12px;
+    border: #ffffff;
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+    font-size: 30px;
+    outline: 0; 
+    font-family: 'Black Han Sans';
+}
+.signin_button:hover {
+    text-decoration: overline underline;
+    text-decoration-color: rgb(255, 116, 116);
+    text-align: center;
+    margin: 12px;
+    border-style: none;
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+    font-size: 30px;
+    outline: 0; 
+    font-family: 'Black Han Sans';
+}
+.option{
+    font-family:'Do Hyeon';
+    font-size: 20px;
+}
+.search{
+    font-family:'Do Hyeon';
+    font-size: 20px;
+}
+.filter{
+    text-align: center;
+    margin: 12px;
+    color: #ffffff;
+    border:#ffffff;
+    background-color: rgb(255, 116, 116);
+    padding: 5px 5px 5px 5px;
+    font-size: 20px;
+    outline: 0; 
+    font-family: 'Do Hyeon';
+}
+.filter:hover{
+    text-align: center;
+    margin: 12px;
+    color: rgb(255, 116, 116);
+    background-color: #ffffff;
+    padding: 5px 5px 5px 5px;
+    font-size: 20px;
+    outline: 0; 
+    font-family: 'Do Hyeon';
+}
+img{
+    width: 100%;
+
+}
