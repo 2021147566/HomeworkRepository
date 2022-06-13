@@ -1,0 +1,219 @@
+/* Header Design */
+.header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+}
+
+.body{
+    background-image: url('main_background.gif');
+}
+
+@keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+}
+
+/* press 버튼 - submit 이후 html 파일에 추가하기*/
+#linking {
+    display: none;
+    font-family: 'Bebas Neue';
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 50px;
+    margin-left: 55%;
+    margin-top: 18%;
+    border: none;
+    transform: rotate(1deg);
+    animation: blink-effect 1.5s step-end infinite;
+    opacity: 80%;
+}
+
+/* sidebarBtn Design */
+.sidebarBtn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    z-index: 15;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: right 0.35s
+}
+.sidebarBtn span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: #fff;
+    opacity: 70%;
+    transition: all .35s;
+}
+.sidebarBtn span:nth-child(1) {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sidebarBtn span:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sidebarBtn span:nth-child(3) {
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#sidebarIcon {
+    display: none;
+}
+
+
+/* Sidebar Button Animation when Button Pressed */
+#sidebarIcon:checked ~ div .sidebarBtn {
+    right: 250px;
+}
+#sidebarIcon:checked ~ div .sidebarBtn span:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+#sidebarIcon:checked ~ div .sidebarBtn span:nth-child(2) {
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+}
+#sidebarIcon:checked ~ div .sidebarBtn span:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+/* Sidebar Animation when Button Pressed */
+#sidebarIcon:checked ~ div.main .sidebar {
+    right: 0;
+}
+
+
+.main {
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}
+
+
+/* Sidebar Design */
+.main .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    z-index: 10;
+    width: 250px;
+    height: 100%;
+    background-image: url('side_background.jpg');
+    background-size: contain;
+    transition: right .35s;
+}
+
+/* 가사 유무 Checkbox */
+.sidebar .lyricInput {
+    font-family: 'Gowun Dodum';
+    margin: 70px 30px 40px 0px;
+    color:aliceblue;
+    opacity: 80%;
+}
+.sidebar .lyricInput input {
+    opacity: 0%;
+}
+/* 가사 유무 Checkbox Animation*/
+.sidebar .lyricInput label {
+    font-size: 17px;
+    color:aliceblue;
+    opacity: 90%;
+    transition: all .5s;
+}
+.sidebar .lyricInput input:checked + label {
+    color: white;
+    text-shadow: 0 0 10px #fff,
+         0 0 20px #fff,
+         0 0 30px #fff,
+         0 0 40px #fff9fe;
+}
+
+/* 상황 Checkbox */
+.sidebar .sitInput {
+    margin: 0 10px;
+}
+.sidebar .sitInput strong {
+    font-size: 17px;
+    font-family: 'Gowun Dodum';
+    color:aliceblue;
+    opacity: 90%;
+}
+.sidebar .sitInput p {
+    font-size: 12px;
+    font-family: 'Gowun Dodum';
+    color:aliceblue;
+    opacity: 60%;
+    line-height: 150%;
+}
+.sidebar .sitInput form {
+    line-height: 30px;
+}
+.sidebar .sitInput input {
+    opacity: 0%;
+}
+/* 상황 Checkbox Animation */
+.sidebar .sitInput label {
+    color: rgb(255, 255, 255);
+    font-family: 'Gowun Dodum';
+    opacity: 60%;
+    transition: all .35s;
+}
+/*수정-글자 위에 :hover하면 살짝 그림자, 글자 클릭:checked하면 더욱 강조*/
+.sidebar .sitInput input:hover + label {
+    color: white;
+    opacity: 80%;
+    text-shadow: 0 0 10px rgb(187, 192, 255),
+    0 0 20px rgb(170, 175, 255),
+    0 0 30px rgb(142, 150, 255),
+    0 0 40px rgb(86, 97, 252);
+}
+.sidebar .sitInput input:checked + label {
+    color: whitesmoke;
+    opacity: 100%;
+    text-shadow: 0 0 10px rgb(187, 192, 255),
+    0 0 20px rgb(170, 175, 255),
+    0 0 30px rgb(142, 150, 255),
+    0 0 40px rgb(86, 97, 252);
+}
+
+.submitbtn {
+    padding-left: 30px;
+    padding-top: 1em;
+    border: none;
+    background-color: transparent;
+    font-family: 'Gowun Dodum';
+    font-size: 17px;
+    color: aliceblue;
+    opacity: 90%;
+    font-weight: bold;
+}
+@media (hover: none) and (pointer: coarse) {
+    .body{
+        background-image: url('main_background.gif');
+        background-repeat:repeat-y;
+    }
+}

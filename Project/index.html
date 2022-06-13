@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+        <style>
+            body {
+                background-color: black;
+                position: center;
+                width: 100%;
+                height: 100%;
+            }
+            a {
+                width: 100%;
+                height: 100%;
+            }
+            .container {
+                width: 100%;
+                height: 100%;
+                background-color: black;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <title>Team Project-index</title>
+    </head>
+    <body>
+        <a href="main.html">
+            <div class="container">
+                <img src="index_background.gif" alt="index page background gif" id="i_bgimg">
+            </div>
+        </a>
+    </body>
+    <script>
+        setTimeout(function() {
+            var o = document.getElementById("i_bgimg");
+            o.parentNode.removeChild(o);
+            var i = document.createElement("img");
+            i.src = "index_click.jpg"
+            document.body.appendChild(i);
+            i.addEventListener("click", function() {
+                window.location.href = "main.html"
+            })
+        }, 1550);
+    </script>
+</html>

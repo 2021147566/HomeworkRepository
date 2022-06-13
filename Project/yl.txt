@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Console Log</title>
+  </head>
+  
+  <body>
+    
+  </body>    
+    <pre id="console"></pre>
+    <script src="fcast.js"></script>
+    <script src="situation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script type="text/javascript">
+      let today = new Date();
+      let month = today.getMonth() + 1 ;
+      let hours = today.getHours();
+
+      //12~6시 새벽 6시~12시 아침 12시~6시 오후 6시~12시 밤
+      //3,4,5 봄 6,7,8 여름 9,10,11 가을 12,1,2 겨울
+
+      if(3 <= month & month <= 5) {
+          keyword += ' 봄';
+      }
+      else if(6 <= month & month <= 8) {
+          keyword += ' 여름';
+      }
+      else if(9 <= month & month <= 11) {
+          keyword += ' 가을';
+      }
+      else {
+          keyword += ' 겨울';
+      }
+
+      if(0 <= hours & hours < 6) {
+          keyword += ' 새벽';
+      }
+      else if(6 <= hours & hours < 12) {
+          keyword += ' 아침';
+      }
+      else if(12 <= hours & hours < 18) {
+          keyword += ' 오후';
+      }
+      else {
+          keyword += ' 밤'
+      }
+
+      
+      function v_link(videoId){
+        location.href='https://www.youtube.com/watch?v='+videoId;
+      }
+
+      console.log(keyword);
+      let randomNumber = Math.floor(Math.random() * 6) + 1;
+      let apikey = "AIzaSyAw6dG2Blx2RICzwantsnitgfehY51PyA8";
+      
+      $.ajax({
+
+        url:'https://www.googleapis.com/youtube/v3/search',
+
+        type:'get',
+
+        dataType:'json',
+
+        data:{part:'snippet',key:apikey,q:keyword, maxResults:randomNumber,type:'video',videoEmbeddable:'true'},
+
+        success:function (data){
+
+          console.log(data);
+
+          $.each(data.items, function(i, item) {
+            console.log(keyword);
+            videoId = item.id.videoId;				 // 비디오 아이디
+            v_link(videoId)
+          });    
+        }
+      });
+
+    </script>
+</html>

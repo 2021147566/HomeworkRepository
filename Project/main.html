@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="fcast.js"></script>
+    
+    <title>Playlist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Han+Sans&family=Do+Hyeon&family=Gowun+Dodum&family=Yeon+Sung&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        background-image: url('main_background.gif');
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+</style>
+<body>
+    <script>
+        // When submitted, closes sidebar & reveals Press-to-Play button
+        function closeSidebar() {
+            document.getElementById("sidebarIcon").checked = false;
+            playBtn = document.getElementById("linking");
+            playBtn.style.display = "inline";
+        }
+        
+    </script>
+    <input type="checkbox" id="sidebarIcon" checked="true">
+
+    <!--Header for placing sidebarBtn and Background Image-->
+    <div class="header">
+        <!--Design for sidebarBtn-->
+        <label for="sidebarIcon" class="sidebarBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+    </div>
+
+    <!--press 버튼 - submit 이후 html 파일에 추가하기-->
+    <button type="button" onclick="location.href='youtube_link.html'" id = 'linking'>Press to Play</button></p>
+    
+    <!--Main including Sidebar-->
+    <div class="main">
+        <div id="sidebar" class="sidebar">
+            <img class="logo" src='logo.png' style="width: 100%; margin-left: 0px; opacity: 80%;">
+            <div class="lyricInput">
+
+                <form>
+                    <input type="checkbox" name="lyrics" id="lyricBox">
+                    <label for="lyricBox">&nbsp;&nbsp;&nbsp;가사 없는 노래는 클릭</label>
+                </form>
+            </div>
+         
+            <div class="sitInput">
+                
+                <strong>&nbsp;&nbsp;&nbsp;&nbsp; 현재 상황을 고르시오:</strong>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(중복 선택 불가)</p>
+                <form>
+                        <input type="radio" name="situation" class="situation" id="sit1" value="카페">
+                        <label for="sit1">&nbsp;카페</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit2" value="소풍">
+                        <label for="sit2">&nbsp;소풍</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit3" value="드라이브">
+                        <label for="sit3">&nbsp;드라이브</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit4" value="산책">
+                        <label for="sit4">&nbsp;산책</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit5" value="휴식">
+                        <label for="sit5">&nbsp;휴식</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit6" value="샤워">
+                        <label for="sit6">&nbsp;샤워</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit7" value="파티">
+                        <label for="sit7">&nbsp;파티</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit8" value="공부">
+                        <label for="sit8">&nbsp;공부</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit9" value="업무">
+                        <label for="sit9">&nbsp;업무</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit10" value="수면">
+                        <label for="sit10">&nbsp;수면</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit11" value="식사">
+                        <label for="sit11">&nbsp;식사</label><br>
+                        <input type="radio" name="situation" class="situation" id="sit12" value=" " checked>
+                        <label for="sit12">&nbsp;입력 안함</label><br>
+                        
+                </form>
+                <button type="button" class="submitbtn" onclick="getSituations(); closeSidebar();" >검색</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

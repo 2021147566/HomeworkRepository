@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Console Log</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!--favicon.ico 에러 방지용-->
+  </head>
+  
+  <body>
+    
+  </body>    
+    <pre id="console"></pre>
+    <script src="fcast.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script type="text/javascript">
+      
+      // Receive Keywords from localStorage & combine Keywords into a single string
+
+      if(localStorage.getItem("situation")){
+        var sitKeyword = localStorage.getItem("situation")
+      }
+      else{
+        sitKeyword = null;
+      }
+      if(localStorage.getItem("season")){
+        var ssnKeyword = localStorage.getItem("season")
+      }
+      else{
+        ssnKeyword = null;
+      }
+      if(localStorage.getItem("time")){
+        var timeKeyword = localStorage.getItem("time").split(' ')[1]
+      }
+      else{
+        timeKeyword = null;
+      }
+      if(localStorage.getItem("lyric")){
+        var lyrKeyword = localStorage.getItem("lyric");
+      }
+      else{
+        lyrKeyword = '';
+      }
+
+
+      keyword = keyword + ' ' + sitKeyword + ssnKeyword + ' ' + timeKeyword + ' ' + lyrKeyword;
+      console.log(keyword);
+
+      function v_link(videoId){
+        location.href='https://www.youtube.com/watch?v='+videoId;
+      }
+
+      let randomNumber = Math.floor(Math.random() * 6) + 1;
+      let apikey = "AIzaSyCroW-tZFSqyALfaZ6SzwjWeJXI2Gr4I1A";
+      
+      $.ajax({
+
+        url:'https://www.googleapis.com/youtube/v3/search',
+
+        type:'get',
+
+        dataType:'json',
+
+        data:{part:'snippet',key:apikey,q:keyword, maxResults:randomNumber,type:'video',videoEmbeddable:'true'},
+
+        success:function (data){
+
+          console.log(data);
+
+          $.each(data.items, function(i, item) {
+            console.log(keyword);
+            videoId = item.id.videoId;				 // 비디오 아이디
+            v_link(videoId)
+          });    
+        }
+      });
+
+    </script>
+</html>
